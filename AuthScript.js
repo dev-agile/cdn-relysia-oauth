@@ -47,10 +47,11 @@ function RelysiaOAuth (onSuccess, onError, clientKey, clientSecret) {
         const ssoUrl = `${serverUrl}/auth/login?clientKey=${clientKey}`;
         const SSO_WINDOW_NAME = "auth_window";
     
-        const left = (window.screen.width/2)-(800/2);
-        const top = (window.screen.height/2)-(800/2);
+        // const left = (window.screen.width/2)-(800/2);
+        // const top = (window.screen.height/2)-(800/2);
     
-        relysiaAuthWin = window.open(ssoUrl, SSO_WINDOW_NAME, `toolbar=yes,scrollbars=yes,resizable=yes,top=${top},left=${left},width=800,height=800`);
+        // relysiaAuthWin = window.open(ssoUrl, SSO_WINDOW_NAME, `toolbar=yes,scrollbars=yes,resizable=yes,top=${top},left=${left},width=800,height=800`);
+        relysiaAuthWin = window.open(ssoUrl, SSO_WINDOW_NAME, `toolbar=yes,scrollbars=yes,resizable=yes`);
         if (window.addEventListener) {
             window.addEventListener("message", onAuthResp, false);
         }
